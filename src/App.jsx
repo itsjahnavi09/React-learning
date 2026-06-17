@@ -1,8 +1,12 @@
 import "./App.css";
-import Counter from "./components/counters";
+import Toggle from "./components/Toggle";
 
 function App() {
-  return <Counter />;
+  return (
+    <div className="app-container">
+      <Toggle />
+    </div>
+  );
 }
 
 export default App;
