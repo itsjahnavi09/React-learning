@@ -1,16 +1,32 @@
-# React + Vite
+1. What is Prop Drilling?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prop Drilling means passing data from one component to another through many components. Sometimes the middle components do not need the data, but they still have to pass it. This makes the code longer and confusing.
 
-Currently, two official plugins are available:
+2. What is Context API?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Context API is a React feature that helps us share data between many components without passing props again and again.
 
-## React Compiler
+3. What is Provider?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Provider is a component that stores the data and shares it with all the components inside it.
 
-## Expanding the ESLint configuration
+4. What is useContext()?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+useContext() is a React Hook that is used to get data from Context. It lets us use shared data directly inside a component.
+
+5. Why is Context API useful?
+
+Context API is useful because it saves time and removes the need to pass props through many components. It makes the code clean and easy to manage.
+
+6. When should we avoid Context API?
+
+We should avoid Context API when only one or two components need the data. In that case, using props is easier.
+
+7. Difference between Props and Context API
+Props	Context API
+Props pass data from parent to child.	Context API shares data with many components.
+Data is passed manually.	Data is accessed directly using useContext().
+Good for small applications.	Good for large applications or shared data.
+8. What did you learn from this assignment?
+
+In this assignment, I learned what Prop Drilling is and how Context API solves it. I learned how to create a Context, use a Provider, and access data with useContext(). I also learned that when the user data changes, all the components update automatically.
